@@ -6,31 +6,34 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="160dp"
+        android:id="@+id/material"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="材料"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/materialIndex"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
 
     <EditText
+        android:id="@+id/qty"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="數目"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintStart_toEndOf="@+id/material"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/deleteBtn"
         android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_height="40dp"
         android:backgroundTint="@color/design_default_color_error"
         android:text="X"
         android:textSize="16sp"
@@ -38,5 +41,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499" />
+
+    <Spinner
+        android:id="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/unitValue"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/qty"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/materialIndex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.503" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

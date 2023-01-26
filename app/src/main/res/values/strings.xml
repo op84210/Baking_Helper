@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Baking Helper</string>
+    <string name="itemList">itemList</string>
 </resources>
